@@ -89,7 +89,7 @@ func GetAllUser(c *fiber.Ctx) error {
 
 	}
 
-	return c.Status(201).JSON(fiber.Map{
+	return c.Status(200).JSON(fiber.Map{
 		"msj": "Successfully", "usuario": varUser,
 	})
 
