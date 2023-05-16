@@ -110,7 +110,7 @@ func GetAllPersonal(c *fiber.Ctx) error {
 	pageSize := 10
 	offset := (page - 1) * pageSize
 
-	perso := "ID_DNI_C, CIP_C, AP_PATERNO_V, AP_MATERNO_V, NOMBRE_V, DOMIC_I, CELULAR_V, FOTO_V, FECHA_NAC_D, FECHA_CREATE_D,FECHA_UPDATE_D,FECHA_DELETE_D,GRADO_ID_I, ESPECIALIDAD_ID_I"
+	perso := "ID_DNI_C, CIP_C, AP_PATERNO_V, AP_MATERNO_V, NOMBRE_V, DOMIC_I, CELULAR_V, FOTO_V, FECHA_NAC_D, FECHA_CREATE_D, FECHA_UPDATE_D, GRADO_ID_I, ESPECIALIDAD_ID_I"
 	queryGetAll := `SELECT ` + perso + ` FROM personal ORDER BY FECHA_CREATE_D DESC LIMIT ? OFFSET ?;`
 	rows, err := DBconnect.Query(queryGetAll, pageSize, offset)
 	if err != nil {
@@ -133,7 +133,6 @@ func GetAllPersonal(c *fiber.Ctx) error {
 			&per.FECHA_NAC_D,
 			&per.FECHA_CREATE_D,
 			&per.FECHA_UPDATE_D,
-			&per.FECHA_DELETE_D,
 			&per.GRADO_ID_I,
 			&per.ESPECIALIDAD_ID_I,
 		)

@@ -12,7 +12,6 @@ type Personal struct {
 	CELULAR_V         *string
 	FECHA_CREATE_D    *string `form:"FECHA_CREATE_D" json:"FECHA_CREATE_D,omitempty" comment:""`
 	FECHA_UPDATE_D    *string `form:"FECHA_UPDATE_D" json:"FECHA_UPDATE_D,omitempty" comment:""`
-	FECHA_DELETE_D    *string `form:"FECHA_DELETE_D" json:"FECHA_DELETE_D,omitempty" comment:""`
 	GRADO_ID_I        uint
 	ESPECIALIDAD_ID_I uint
 }
