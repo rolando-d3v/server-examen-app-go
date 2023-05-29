@@ -75,7 +75,7 @@ func GetAllUser(c *fiber.Ctx) error {
 			&us.SECRET_PASS_V,
 			&us.ESTADO_B,
 			&us.FECHA_CREATE_D,
-			&us.ROLE.ID_ROLE,
+			&us.ROLE.ID_ROLE_I,
 			&us.ROLE.DESC_CORTA_V,
 			&us.ROLE.DESC_LARGA_V,
 			&us.ROLE.ESTADO_B,
